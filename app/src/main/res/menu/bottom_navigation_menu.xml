@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/productsFragment"
+        android:title="Shopping"
+        android:icon="@drawable/baseline_shopping_bag_24"/>
+    <item
+        android:id="@+id/favouriteFragment"
+        android:title="Favourite"
+        android:icon="@drawable/baseline_favorite_24"/>
+    <item
+        android:id="@+id/myBoxFragment"
+        android:title="My Box"
+        android:icon="@drawable/baseline_shopping_basket_24"/>
+</menu>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/productsFragment">
+
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.samet.shoppapp.ui.fragments.FavouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" >
+        <action
+            android:id="@+id/action_favouriteFragment_to_itemFragment"
+            app:destination="@id/itemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.samet.shoppapp.ui.fragments.ProductsFragment"
+        android:label="fragment_products"
+        tools:layout="@layout/fragment_products" >
+        <action
+            android:id="@+id/action_productsFragment_to_itemFragment"
+            app:destination="@id/itemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myBoxFragment"
+        android:name="com.samet.shoppapp.ui.fragments.MyBoxFragment"
+        android:label="fragment_my_box"
+        tools:layout="@layout/fragment_my_box" >
+        <action
+            android:id="@+id/action_myBoxFragment_to_lastPageFragment"
+            app:destination="@id/lastPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemFragment"
+        android:name="com.samet.shoppapp.ui.fragments.ItemFragment"
+        android:label="fragment_item"
+        tools:layout="@layout/fragment_item" >
+        <argument
+            android:name="item"
+            app:argType="com.samet.shoppapp.models.ProductItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/lastPageFragment"
+        android:name="com.samet.shoppapp.ui.fragments.LastPageFragment"
+        android:label="fragment_last_page"
+        tools:layout="@layout/fragment_last_page" >
+        <action
+            android:id="@+id/action_lastPageFragment_to_productsFragment"
+            app:destination="@id/productsFragment" />
+    </fragment>
+</navigation>
